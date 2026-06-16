@@ -124,26 +124,14 @@ word-segmentation-opencv/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── README_DEPLOY.md
 ├── assets/
 │   └── sample-image.jpg
-├── screenshots/
-│   ├── 01-upload-screen.png
-│   ├── 02-original-image-1.png
-│   ├── 03-threshold-preprocessing-result-1.png
-│   ├── 04-bounding-box-output.png
-│   └── 05-segmented-words-output-1.png
-└── portfolio-kit/
-    ├── PROJECT_BRIEF.md
-    ├── RECRUITER_VIEW.md
-    ├── LOCAL_SETUP.md
-    ├── STREAMLIT_DEPLOYMENT.md
-    ├── SCREENSHOT_CHECKLIST.md
-    ├── CASE_STUDY_ID.md
-    ├── CASE_STUDY_EN.md
-    ├── CV_BULLETS.md
-    ├── GITHUB_README.md
-    └── SECURITY_CLEANUP.md
+└── screenshots/
+    ├── 01-upload-screen.png
+    ├── 02-original-image-1.png
+    ├── 03-threshold-preprocessing-result-1.png
+    ├── 04-bounding-box-output.png
+    └── 05-segmented-words-output-1.png
 ```
 
 ## Local Setup
@@ -227,6 +215,6 @@ Use a clean handwritten image with:
 - Results depend on lighting, contrast, threshold value, and dilation kernel size.
 - It is designed for portfolio and educational demonstration purposes.
 
-## Portfolio Value
+## Value
 
 This project demonstrates practical skills in computer vision, OpenCV image preprocessing, thresholding, morphological dilation, contour detection, bounding-box visualization, segmented crop extraction, and simple interactive application deployment using Streamlit.
