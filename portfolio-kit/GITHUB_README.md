@@ -1,33 +1,39 @@
 # Word Segmentation using OpenCV
 
-## Overview
-Word Segmentation using OpenCV is a computer vision project that demonstrates a classical image processing pipeline for detecting handwritten text regions and extracting segmented word/component crops from an input image.
+A computer vision portfolio project that demonstrates an OpenCV-based image preprocessing pipeline for detecting handwritten text regions and extracting segmented word/component crops from an input image.
 
-The project uses OpenCV-based preprocessing, thresholding, morphological dilation, contour detection, bounding-box visualization, and a Streamlit demo interface.
+> **Note:** This project is not an OCR system. It does not recognize or convert handwriting into digital text. The focus is image preprocessing, contour detection, bounding-box visualization, and word/component segmentation.
 
-> Note: This project is not an OCR system. It does not recognize or convert handwriting into digital text.
+## Live Demo
+
+- **Streamlit App:** [https://word-segmentation-opencv-vwxn5bwzguagidn8qdsqcq.streamlit.app/](https://word-segmentation-opencv-vwxn5bwzguagidn8qdsqcq.streamlit.app/)
+- **GitHub Repository:** [https://github.com/frnqpur/word-segmentation-opencv](https://github.com/frnqpur/word-segmentation-opencv)
+
+## Project Overview
+
+This project applies a classical computer vision workflow to process handwritten text images. The application allows users to upload an image, view preprocessing stages, inspect bounding-box results, and review segmented word/component crop outputs through an interactive Streamlit interface.
 
 ## Features
 
 - Upload handwritten text image.
-- Display original image.
+- Display original/resized image.
 - Show grayscale preprocessing result.
-- Show binary threshold result.
-- Apply morphological dilation.
+- Show binary inverse threshold result.
+- Apply morphological dilation for text grouping.
 - Detect contours using OpenCV.
-- Draw bounding boxes around detected text regions.
+- Draw bounding boxes around detected text regions and components.
 - Extract segmented word/component crops.
 - Display results in a Streamlit web demo.
-- Handle invalid image input gracefully.
+- Provide graceful error handling for invalid image input.
 
 ## Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| OpenCV | Image preprocessing and contour detection |
+| OpenCV | Image preprocessing, dilation, contour detection, and bounding boxes |
 | NumPy | Image array manipulation |
-| Pillow | Image upload handling |
+| Pillow | Image upload and image conversion handling |
 | Streamlit | Interactive web demo |
 | Matplotlib | Optional visualization support |
 
@@ -36,6 +42,7 @@ The project uses OpenCV-based preprocessing, thresholding, morphological dilatio
 ```txt
 Input Image
 → RGB Conversion
+→ Resize if Needed
 → Grayscale Conversion
 → Binary Inverse Thresholding
 → Morphological Dilation
@@ -49,19 +56,48 @@ Input Image
 
 | Step | Screenshot |
 |---|---|
-| Upload Screen | `screenshots/01-upload-screen.png` |
-| Original Image | `screenshots/02-original-image.png` |
-| Preprocessing Result | `screenshots/03-threshold-preprocessing-result.png` |
-| Bounding Box Output | `screenshots/04-bounding-box-output.png` |
-| Segmented Word Crops | `screenshots/05-segmented-words-output.png` |
+| Upload Screen | ![Upload screen of the Streamlit word segmentation demo](screenshots/01-upload-screen.png) |
+| Original Image | ![Original handwritten text image displayed in the Streamlit demo](screenshots/02-original-image-1.png) |
+| Preprocessing Result | ![Grayscale and threshold preprocessing result for handwritten text segmentation](screenshots/03-threshold-preprocessing-result-1.png) |
+| Bounding Box Output | ![Handwritten text image with detected bounding boxes around text components](screenshots/04-bounding-box-output.png) |
+| Segmented Word Crops | ![Grid of segmented handwritten word or component crops from the uploaded image](screenshots/05-segmented-words-output-1.png) |
+
+## Repository Structure
+
+```txt
+word-segmentation-opencv/
+├── app.py
+├── requirements.txt
+├── README.md
+├── README_DEPLOY.md
+├── assets/
+│   └── sample-image.jpg
+├── screenshots/
+│   ├── 01-upload-screen.png
+│   ├── 02-original-image-1.png
+│   ├── 03-threshold-preprocessing-result-1.png
+│   ├── 04-bounding-box-output.png
+│   └── 05-segmented-words-output-1.png
+└── portfolio-kit/
+    ├── PROJECT_BRIEF.md
+    ├── RECRUITER_VIEW.md
+    ├── LOCAL_SETUP.md
+    ├── STREAMLIT_DEPLOYMENT.md
+    ├── SCREENSHOT_CHECKLIST.md
+    ├── CASE_STUDY_ID.md
+    ├── CASE_STUDY_EN.md
+    ├── CV_BULLETS.md
+    ├── GITHUB_README.md
+    └── SECURITY_CLEANUP.md
+```
 
 ## Local Setup
 
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/frnqpur/word-segmentation-opencv.git
+cd word-segmentation-opencv
 ```
 
 ### 2. Create Virtual Environment
@@ -72,9 +108,15 @@ python -m venv .venv
 
 ### 3. Activate Virtual Environment
 
-Windows:
+Windows PowerShell:
 
-```bash
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Windows CMD:
+
+```cmd
 .venv\Scripts\activate
 ```
 
@@ -96,6 +138,12 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+Then open the local URL shown in the terminal, usually:
+
+```txt
+http://localhost:8501
+```
+
 ## requirements.txt
 
 ```txt
@@ -107,10 +155,11 @@ matplotlib>=3.7,<4
 ```
 
 ## Recommended Sample Image
+
 Use a clean handwritten image with:
 
 - Clear contrast between text and background.
-- Bright background.
+- Bright and simple background.
 - No private or sensitive information.
 - No GPS/EXIF metadata.
 - No faces, addresses, phone numbers, signatures, or official documents.
@@ -124,4 +173,5 @@ Use a clean handwritten image with:
 - It is designed for portfolio and educational demonstration purposes.
 
 ## Portfolio Value
-This project demonstrates practical skills in computer vision, OpenCV image preprocessing, contour detection, visual segmentation, and simple interactive application deployment using Streamlit.
+
+This project demonstrates practical skills in computer vision, OpenCV image preprocessing, thresholding, morphological dilation, contour detection, bounding-box visualization, segmented crop extraction, and simple interactive application deployment using Streamlit.

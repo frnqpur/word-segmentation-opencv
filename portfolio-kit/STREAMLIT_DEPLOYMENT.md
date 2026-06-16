@@ -1,5 +1,8 @@
 # Streamlit Deployment Guide
 
+**Live Demo:** https://word-segmentation-opencv-vwxn5bwzguagidn8qdsqcq.streamlit.app/  
+**GitHub Repository:** https://github.com/frnqpur/word-segmentation-opencv
+
 ## Recommended Deployment Option
 Use **Streamlit Community Cloud** for this portfolio demo.
 
@@ -44,11 +47,13 @@ app.py
 ## Repository Structure for Deployment
 
 ```txt
-word-segmentation-streamlit/
+word-segmentation-opencv/
 ├── app.py
 ├── requirements.txt
 ├── README.md
 ├── README_DEPLOY.md
+├── assets/
+│   └── sample-image.jpg
 └── screenshots/
 ```
 

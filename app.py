@@ -15,6 +15,7 @@ This demo performs image segmentation only. It does not perform OCR or handwriti
 from __future__ import annotations
 
 import io
+from pathlib import Path
 from dataclasses import dataclass
 from typing import List, Tuple
 
@@ -255,21 +256,26 @@ uploaded_file = st.file_uploader(
 
 st.markdown("### Optional Sample Image")
 st.write(
-    "If you want to include a sample image, place it in the same folder as `app.py` and name it `sample.jpg`. "
+    "A sample image can be provided at `assets/sample-image.jpg`. "
+    "The app also supports legacy `sample.jpg` in the project root. "
     "The app will still work without a sample image."
 )
 
 sample_image = None
-try:
-    sample_image = Image.open("sample.jpg")
-except FileNotFoundError:
-    sample_image = None
-except Exception:
-    sample_image = None
+sample_image_label = None
+for sample_path in [Path("assets/sample-image.jpg"), Path("sample.jpg")]:
+    try:
+        if sample_path.exists():
+            sample_image = Image.open(sample_path)
+            sample_image_label = str(sample_path).replace("\\", "/")
+            break
+    except Exception:
+        sample_image = None
+        sample_image_label = None
 
 use_sample = False
 if sample_image is not None:
-    use_sample = st.button("Use sample.jpg")
+    use_sample = st.button(f"Use {sample_image_label}")
 
 if uploaded_file is None and not use_sample:
     st.warning("Please upload an image to start the segmentation demo.")

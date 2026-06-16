@@ -1,5 +1,8 @@
 # Word Segmentation Streamlit Demo
 
+**Live Demo:** https://word-segmentation-opencv-vwxn5bwzguagidn8qdsqcq.streamlit.app/  
+**GitHub Repository:** https://github.com/frnqpur/word-segmentation-opencv
+
 Demo ini menampilkan pipeline **Word Segmentation menggunakan OpenCV**. Aplikasi menerima upload image, menampilkan original image, preprocessing result, bounding boxes, dan segmented word/component crops.
 
 > Catatan penting: demo ini bukan OCR dan tidak membaca tulisan menjadi teks digital. Fokusnya adalah segmentasi visual berbasis classical image processing.
@@ -21,7 +24,7 @@ Demo ini menampilkan pipeline **Word Segmentation menggunakan OpenCV**. Aplikasi
 - Tampilkan segmented word/component crops.
 - Download hasil bounding box sebagai PNG.
 - Graceful error handling untuk file rusak, format tidak valid, dan error OpenCV.
-- Sample image optional melalui file `sample.jpg`.
+- Sample image optional melalui file `assets/sample-image.jpg`.
 - Tidak membutuhkan cPanel.
 
 ---
@@ -33,7 +36,7 @@ word-segmentation-demo/
 ├── app.py
 ├── requirements.txt
 ├── README_DEPLOY.md
-└── sample.jpg              # optional, tidak wajib
+└── assets/sample-image.jpg              # optional, tidak wajib
 ```
 
 ---
@@ -99,12 +102,12 @@ http://localhost:8501
 Jika ingin menampilkan tombol sample image, tambahkan gambar bernama:
 
 ```txt
-sample.jpg
+assets/sample-image.jpg
 ```
 
-Letakkan di folder yang sama dengan `app.py`.
+Letakkan di folder `assets/` dengan nama `sample-image.jpg`.
 
-Jika `sample.jpg` tidak tersedia, aplikasi tetap berjalan normal menggunakan fitur upload image.
+Jika `assets/sample-image.jpg` tidak tersedia, aplikasi tetap berjalan normal menggunakan fitur upload image.
 
 Sebelum menggunakan sample image publik, pastikan metadata sensitif sudah dihapus, terutama metadata lokasi/GPS.
 
@@ -120,7 +123,7 @@ Upload file berikut ke repository:
 app.py
 requirements.txt
 README_DEPLOY.md
-sample.jpg          # optional
+assets/sample-image.jpg          # optional
 ```
 
 ### 6.2 Buka Streamlit Community Cloud
