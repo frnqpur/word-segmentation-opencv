@@ -54,13 +54,68 @@ Input Image
 
 ## Demo Screenshots
 
-| Step | Screenshot |
-|---|---|
-| Upload Screen | ![Upload screen of the Streamlit word segmentation demo](screenshots/01-upload-screen.png) |
-| Original Image | ![Original handwritten text image displayed in the Streamlit demo](screenshots/02-original-image-1.png) |
-| Preprocessing Result | ![Grayscale and threshold preprocessing result for handwritten text segmentation](screenshots/03-threshold-preprocessing-result-1.png) |
-| Bounding Box Output | ![Handwritten text image with detected bounding boxes around text components](screenshots/04-bounding-box-output.png) |
-| Segmented Word Crops | ![Grid of segmented handwritten word or component crops from the uploaded image](screenshots/05-segmented-words-output-1.png) |
+### 1. Upload Screen
+
+![Upload screen of the Streamlit word segmentation demo](screenshots/01-upload-screen.png)
+
+**ID:** Tampilan awal demo Streamlit untuk mengunggah gambar tulisan tangan.  
+**EN:** Initial Streamlit demo screen for uploading a handwritten text image.
+
+---
+
+### 2. Original Image
+
+![Original handwritten text image displayed in the Streamlit demo - sample 1](screenshots/02-original-image-1.png)
+
+**ID:** Gambar asli pertama yang diunggah sebelum proses segmentasi dilakukan.  
+**EN:** First original uploaded image before the segmentation process.
+
+![Original handwritten text image displayed in the Streamlit demo - sample 2](screenshots/02-original-image-2.png)
+
+**ID:** Gambar asli kedua yang digunakan sebagai variasi sample input.  
+**EN:** Second original image used as an additional sample input variation.
+
+---
+
+### 3. Threshold / Preprocessing Result
+
+![Grayscale and threshold preprocessing result for handwritten text segmentation - sample 1](screenshots/03-threshold-preprocessing-result-1.png)
+
+**ID:** Hasil preprocessing pertama berupa grayscale dan binary threshold untuk memisahkan area teks dari background.  
+**EN:** First preprocessing result showing grayscale and binary threshold output to separate text regions from the background.
+
+![Grayscale and threshold preprocessing result for handwritten text segmentation - sample 2](screenshots/03-threshold-preprocessing-result-2.png)
+
+**ID:** Hasil preprocessing kedua untuk menunjukkan variasi output pada sample image lain.  
+**EN:** Second preprocessing result showing output variation on another sample image.
+
+---
+
+### 4. Bounding Box Output
+
+![Handwritten text image with detected bounding boxes around text components](screenshots/04-bounding-box-output.png)
+
+**ID:** Hasil deteksi bounding box pada area tulisan menggunakan contour detection OpenCV.  
+**EN:** Bounding box detection result on handwritten text regions using OpenCV contour detection.
+
+---
+
+### 5. Segmented Word Crops
+
+![Grid of segmented handwritten word or component crops - sample 1](screenshots/05-segmented-words-output-1.png)
+
+**ID:** Hasil crop kandidat kata atau komponen tulisan dari sample pertama.  
+**EN:** Segmented word or text-component crop outputs from the first sample.
+
+![Grid of segmented handwritten word or component crops - sample 2](screenshots/05-segmented-words-output-2.png)
+
+**ID:** Hasil crop kandidat kata atau komponen tulisan dari sample kedua.  
+**EN:** Segmented word or text-component crop outputs from the second sample.
+
+![Grid of segmented handwritten word or component crops - sample 3](screenshots/05-segmented-words-output-3.png)
+
+**ID:** Hasil crop tambahan yang menampilkan variasi kandidat komponen tulisan hasil segmentasi.  
+**EN:** Additional segmented crop output showing variation in detected text-component candidates.
 
 ## Repository Structure
 
