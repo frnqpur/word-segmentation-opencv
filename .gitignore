@@ -1,0 +1,42 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Streamlit local config
+.streamlit/secrets.toml
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build / package artifacts
+build/
+dist/
+*.egg-info/
+
+# Local logs and temporary files
+*.log
+tmp/
+temp/
+
+# Optional local-only outputs
+outputs/
